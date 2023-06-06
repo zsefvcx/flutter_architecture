@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:skeleton_app_logical/business/business.dart';
 
 import 'ui/ui.dart';
 
@@ -13,5 +14,6 @@ import 'ui/ui.dart';
 /// 5.    Настройте статический анализатор, подключите dart_code_metrics, проведите анализ и соберите метрики с собственного кода.
 
 void main() {
+  BlocFactory.instance.initialize();
   runApp(const MyApp());
 }

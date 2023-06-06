@@ -1,20 +1,28 @@
 
-import '../../data/data.dart';
+import 'dart:async';
 
-class ClassIncrement implements AbstractClassIncrement {
-  int _value;
+import 'package:skeleton_app_logical/data/data.dart';
 
-  ClassIncrement(this._value);
+class MainBloc {
+  final AbstractClassIncrement _abstractClassIncrement;
 
-  int get value => _value;
+  final StreamController<int> _eventsController = StreamController();
 
-  @override
-  int incrementValue() {
-    return _value++;
+  MainBloc({
+    required AbstractClassIncrement abstractClassIncrement,
+  }) : _abstractClassIncrement = abstractClassIncrement;
+
+  void add(int event){
+    if(_eventsController.isClosed) return;
+    _eventsController.add(event);
   }
 
-  @override
-  String toString() {
-    return _value.toString();
+  int getIncrementalValue(){
+    _abstractClassIncrement.incrementValue();
+    return _abstractClassIncrement.value;
+  }
+
+  void dispose(){
+    _eventsController.close();
   }
 }

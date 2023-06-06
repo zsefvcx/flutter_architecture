@@ -1,5 +1,7 @@
 abstract class AbstractClassIncrement {
 
-  int incrementValue();
+  int get value;
+
+  void incrementValue();
 
 }

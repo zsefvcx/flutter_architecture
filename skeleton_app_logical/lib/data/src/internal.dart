@@ -6,10 +6,11 @@ class ClassIncrement implements AbstractClassIncrement {
 
   ClassIncrement(this._valueInternal);
 
+  @override
   int get value => _valueInternal;
 
   @override
-  int incrementValue() {
-    return _valueInternal++;
+  void incrementValue() {
+    _valueInternal++;
   }
 }

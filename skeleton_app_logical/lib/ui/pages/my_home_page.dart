@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
 import 'package:skeleton_app_logical/business/business.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -12,12 +12,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-  final ClassIncrement _counter = ClassIncrement(0);
-
+  int counter = 0;
   void _incrementCounter() {
+    context.read<MainBloc>().add(0);
+    counter = context.read<MainBloc>().getIncrementalValue();
     setState(() {
-      _counter.incrementValue();
     });
   }
 
@@ -37,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              '$counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
