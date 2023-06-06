@@ -14,14 +14,26 @@ dependencies:
   cupertino_icons: ^1.0.2
   get_it: ^7.6.0
   provider: ^6.0.5
-  injectable: ^2.1.2
+  #injectable: ^2.1.2
+  #flutter pub run build_runner build
+  #flutter pub add freezed_annotation
+  #flutter pub add --dev build_runner
+  #flutter pub add --dev freezed
+  # if using freezed to generate fromJson/toJson, also add:
+  #flutter pub add json_annotation
+  #flutter pub add --dev json_serializable
+  freezed: ^2.3.5
+  freezed_annotation: ^2.2.0
+  json_annotation: ^4.8.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-  injectable_generator: ^2.1.6
+  #injectable_generator: ^2.1.6
+  #dart pub run build_runner watch
   build_runner: ^2.4.4
+  json_serializable: ^6.7.0
 
 flutter:
   uses-material-design: true
