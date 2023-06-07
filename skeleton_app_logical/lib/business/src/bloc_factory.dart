@@ -1,5 +1,4 @@
 
-
 import 'package:get_it/get_it.dart';
 import 'package:skeleton_app_logical/data/data.dart';
 

@@ -30,6 +30,7 @@ class MainBloc {
           ));
         },
         getDataWeather: (_) async {
+          if(_abstractClassIncrement.isBusy()) return;
           _stateController.add(MainBlocState.loaded(
             currentWeather: await _abstractClassIncrement.getDataWeather()
                 .timeout(const Duration(seconds: 5),

@@ -6,6 +6,8 @@ import 'package:skeleton_app_logical/model/model.dart';
 class ClassIncrement implements AbstractClassIncrement {
   int _valueInternal;
 
+  bool _isBusy = false;
+
   ClassIncrement(this._valueInternal);
 
   @override
@@ -18,11 +20,14 @@ class ClassIncrement implements AbstractClassIncrement {
 
   @override
   Future<CurrentWeather> getDataWeather() async {
-
+    int valueInternal = _valueInternal;
+    _isBusy = true;
     await Future.delayed(const Duration(seconds: 2));
+    _valueInternal = valueInternal;
+    _isBusy = false;
 
     return CurrentWeather(
-      id: _valueInternal,
+      id: valueInternal,
       T: 25,
       H: 65,
       P: 760,
@@ -31,6 +36,7 @@ class ClassIncrement implements AbstractClassIncrement {
     );
   }
 
-
+  @override
+  bool isBusy() => _isBusy;
 
 }

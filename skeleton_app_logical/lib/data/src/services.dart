@@ -8,4 +8,6 @@ abstract class AbstractClassIncrement {
 
   Future<CurrentWeather> getDataWeather();
 
+  bool isBusy();
+
 }
