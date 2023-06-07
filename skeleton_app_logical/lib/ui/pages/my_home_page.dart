@@ -14,9 +14,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int counter = 0;
   void _incrementCounter() {
-    counter = context.read<MainBloc>().getIncrementalValue();
     context.read<MainBloc>().add(const MainBlocEvent.getDataWeather());
-    setState(() {});
+    setState(() {
+      counter = context.read<MainBloc>().getIncrementalValue();
+    });
   }
 
   @override

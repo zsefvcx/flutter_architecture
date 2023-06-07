@@ -54,6 +54,7 @@ class MainBloc {
 
   int getIncrementalValue(){
     _abstractClassIncrement.incrementValue();
+
     return _abstractClassIncrement.value;
   }
 
