@@ -26,7 +26,7 @@ class MainBloc {
         init: (_) async {
           _stateController.add(const MainBlocState.loading());
           _stateController.add(MainBlocState.loaded(
-             currentWeather: await _abstractClassIncrement.getDataWeather()
+             currentWeather: await _abstractClassIncrement.getDataWeather(),
           ));
         },
         getDataWeather: (_) async {
@@ -40,7 +40,7 @@ class MainBloc {
                 P: 760,
                 lan: 51.209139,
                 lat: 39.208655,
-              ))
+              ),),
           ));
         },
       );

@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Text(state.currentWeather.T.toString()),
                         Text(state.currentWeather.H.toString()),
                         Text(state.currentWeather.P.toString()),
-                      ]),
+                      ],),
                 ),
                 floatingActionButton: FloatingActionButton(
                   onPressed: _incrementCounter,

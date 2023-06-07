@@ -44,16 +44,5 @@ dart_code_metrics:
     - prefer-trailing-comma
     - prefer-conditional-expressions
     - no-equal-then-else
-    - public-late-final-fields
-    - private-late-final-fields
-    - public-nullable-fields
-    - private-nullable-fields
-    - named-constructors
-    - factory-constructors
-    - getters
-    - setters
-    - public-static-methods
-    - private-static-methods
-    - protected-methods
-    - disable-sunset-warning
-    - etc.
+
+
