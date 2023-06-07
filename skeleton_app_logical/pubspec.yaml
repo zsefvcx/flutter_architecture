@@ -25,6 +25,9 @@ dependencies:
   freezed: ^2.3.5
   freezed_annotation: ^2.2.0
   json_annotation: ^4.8.1
+  path: ^1.8.3
+  uuid: ^3.0.7
+  dart_style:
 
 dev_dependencies:
   flutter_test:
