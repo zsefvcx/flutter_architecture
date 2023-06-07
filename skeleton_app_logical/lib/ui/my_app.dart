@@ -21,6 +21,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     _mainBloc = BlocFactory.instance.get<MainBloc>();
+    _mainBloc.add(const MainBlocEvent.init());
   }
 
   @override
