@@ -28,6 +28,11 @@ dependencies:
   path: ^1.8.3
   uuid: ^3.0.7
   dart_style:
+  dart_code_metrics: ^5.7.5
+  #dart pub global activate dart_code_metrics
+  #flutter pub add dart_code_metrics
+  #flutter pub run dart_code_metrics:metrics lib
+  #flutter pub run dart_code_metrics:metrics lib --reporter=html
 
 dev_dependencies:
   flutter_test:
